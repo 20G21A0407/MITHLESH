@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function createTable(){
+        
+        // create a table
+    var table = document.createElement("table");
+//create headiing
+    var h1 = document.createElement("h1");
+
+    //   create a thead,tbody,tfoot
+    var thead = document.createElement("thead");
+    var tbody = document.createElement("tbody");
+    var tfoot = document.createElement("tfoot");
+    // create a thead in the inside of th,tr1
+    var tr1 = document.createElement("tr")
+    var th1 = document.createElement("th");
+    var th2 = document.createElement("th");
+    var th3 = document.createElement("th");
+    // create a tbody in tr2
+    var tr2 = document.createElement("tr");
+    var td1 = document.createElement("td");
+    var td2 = document.createElement("td");
+    var td3 = document.createElement("td");
+    // create a tbody in tr3
+    var tr3 = document.createElement("tr");
+    var td4 = document.createElement("td");
+    var td5 = document.createElement("td");
+    var td6 = document.createElement("td");
+    // create a tbody in tr4
+    var tr4 = document.createElement("tr");
+    var td7 = document.createElement("td");
+    var td8 = document.createElement("td");
+    var td9 = document.createElement("td");
+    // create a tfoot in tr5 and td10
+    var tr5= document.createElement("tr");
+    var td10 = document.createElement("td") ;
+    // table.style.backgroundColor = "red";
+    table.frame = "box";
+    table.rules = "all";
+    table.cellPadding = "10px";
+    table.width= "100%";
+    table.style.border="red";
+    td10.style.textAlign = "center";
+    table.style.marginTop = "10px"
+    
+    
+    
+    // create a tr names
+    th1.innerText = "student";
+    th2.innerText = "phone number";
+    th3.innerText = "id";
+    //create a   td  names
+    td1.innerText = "raju";
+    td2.innerText = "987654321";
+    td3.innerText = "403";
+    td4.innerText = "ramu";
+    td5.innerText = "123456789";
+    td6.innerText = "405";
+    td7.innerText = "srikanth"
+    td8.innerText = "7032852400";
+    td9.innerText = "466";
+    td10.innerText = "ALL THE BEST";
+    h1.innerText = "task is done";
+    // create child to tr1 to th1-th3
+    tr1.appendChild(th1);
+    tr1.appendChild(th2);
+    tr1.appendChild(th3);
+    tr2.appendChild(td1);
+    tr2.appendChild(td2);
+    tr2.appendChild(td3);
+    tr3.appendChild(td4);
+    tr3.appendChild(td5);
+    tr3.appendChild(td6);
+    tr4.appendChild(td7);
+    tr4.appendChild(td8);
+    tr4.appendChild(td9);
+
+    tr5.appendChild(td10).colSpan = "3";
+    
+
+    // to child to parent in  thead,tbody,tfoot
+    thead.appendChild(tr1);
+    tbody.appendChild(tr2);
+    tbody.appendChild(tr3);
+    tbody.appendChild(tr4);
+    tfoot.appendChild(tr5);
+
+// to add table to thead, tbody, tfoot in child to appendparent
+
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    table.appendChild(tfoot);
+
+    var body = document.getElementsByTagName("body")
+    body[0].appendChild(table);
+    console.log(body);
+}
+
+</script>
+<style>
+    body  {
+        text-align: center; 
+    }
+    button{
+    margin-top: 5px;
+}
+</style>
+<body>
+    <h1>BY USING JAVASCRIPT TO CREATE A TABLE </h1>
+    <button onclick="createTable()">subscribe</button><br>
+</body>
+</html>
